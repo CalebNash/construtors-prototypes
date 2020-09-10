@@ -36,9 +36,26 @@ function expect(target) {
 // \___/\____/_/ /_/____/\__/_/   \__,_/\___/\__/\____/_/  /____/
 //
 // ONLY ADD CODE TO THIS SECTION
+function Dog({color, hungry = true, status = 'normal', owner} = {}){
+  this.color = color;
+  this.hungry = hungry;
+  this.status = status;
+  this.owner = owner;
+}
+
+
+function Human({cool= false} = {}){
+  this.cool = cool;
+}
 
 
 
+Human.prototype.pet = function(dog){
+  dog.status = 'happy'
+}
+Human.prototype.feed = function(dog){
+  dog.hungry = false;
+}
 
 //        __
 //   ____/ /___  ____ ______
